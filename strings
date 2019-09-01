@@ -1,0 +1,77 @@
+//3) Reverse a string 
+
+//1- using for of loop 
+
+function reverse(str) {
+    let reversed = '';
+
+    for (let character of str) {
+        reversed = character + reversed;
+    }
+    return reversed;
+}
+
+
+//2- using reverse()
+
+function reverse(str) {
+
+    const string = str.split('')
+        .reverse()
+        .join('')
+    return string
+
+}
+
+// 3- using reduce
+ 
+ function reverse(str) {
+    return str.split('').reduce((acc, curr) => acc = curr + acc, acc = '');
+    return str
+}
+
+console.log(reverse('apple is such a good fruit')),
+
+
+// check if a string is a palindrom. abba === abba; good === doog
+//1 - iterate over the string and copare the first iteration to the localStorage, decreasing by 1
+
+function palindrom(str) {
+    str.split('').forEach((char, i) => {
+        // i starts at 0 and increases at each iteration. so subtracting i and - 1, will render the exact mirror of the char iteration 
+        console.log(char, str[str.length - i - 1])
+    })
+};
+
+//2 - check is the string and the string reversed are the SyncManager;
+function palindrom(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+
+console.log(palindrom('abba'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
